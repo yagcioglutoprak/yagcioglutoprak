@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" fill="none">
+  <defs>
+    <clipPath id="rounded">
+      <rect width="800" height="220" rx="8" ry="8"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <!-- Background -->
+    <rect width="800" height="220" fill="#0a0a0f"/>
+    <!-- Border -->
+    <rect x="0.5" y="0.5" width="799" height="219" rx="7.5" ry="7.5" stroke="#1a1a2e" stroke-width="1" fill="none"/>
+    <!-- Title bar -->
+    <rect width="800" height="36" fill="#0f0f17"/>
+    <line x1="0" y1="36" x2="800" y2="36" stroke="#1a1a2e" stroke-width="1"/>
+    <!-- Dots -->
+    <circle cx="20" cy="18" r="5" fill="#00e5a0" opacity="0.8"/>
+    <circle cx="38" cy="18" r="5" fill="#00e5a0" opacity="0.5"/>
+    <circle cx="56" cy="18" r="5" fill="#00e5a0" opacity="0.3"/>
+    <!-- Line 1: $ whoami -->
+    <text x="24" y="72" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15">
+      <tspan fill="#00e5a0">$</tspan><tspan fill="#e8e8ed"> whoami</tspan>
+    </text>
+    <!-- Line 2: output -->
+    <text x="24" y="96" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#5b5b6e">toprak — developer / security engineer</text>
+    <!-- Line 3: $ cat /etc/motd -->
+    <text x="24" y="136" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15">
+      <tspan fill="#00e5a0">$</tspan><tspan fill="#e8e8ed"> cat /etc/motd</tspan>
+    </text>
+    <!-- Line 4: output -->
+    <text x="24" y="160" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#5b5b6e">i break things, fix things, and ship things.</text>
+    <!-- Line 5: location -->
+    <text x="24" y="184" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#5b5b6e">based in wroclaw, poland.</text>
+    <!-- Blinking cursor -->
+    <rect x="24" y="198" width="8" height="2" fill="#00e5a0" opacity="0.6"/>
+  </g>
+</svg>
