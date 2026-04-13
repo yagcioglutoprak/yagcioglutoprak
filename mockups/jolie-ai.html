@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=800">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -14,21 +13,21 @@
     border: 1px solid #1a1a2e; display: flex; flex-direction: column;
   }
   .titlebar {
-    height: 40px; background: #0f0f17; display: flex; align-items: center;
+    height: 36px; background: #0f0f17; display: flex; align-items: center;
     padding: 0 14px; gap: 7px; border-bottom: 1px solid #1a1a2e; flex-shrink: 0;
   }
   .dot { width: 10px; height: 10px; border-radius: 50%; }
   .dot-r { background: #ff5f57; } .dot-y { background: #ffbd2e; } .dot-g { background: #28c840; }
   .title-text { flex: 1; text-align: center; color: #5b5b6e; font-size: 13px; font-weight: 500; }
-  .content { display: flex; flex: 1; }
+  .content { display: flex; flex: 1; overflow: hidden; }
   .sidebar {
-    width: 220px; background: #0f0f17; border-right: 1px solid #1a1a2e;
-    padding: 12px 8px; display: flex; flex-direction: column; gap: 2px;
+    width: 200px; background: #0f0f17; border-right: 1px solid #1a1a2e;
+    padding: 10px 8px; display: flex; flex-direction: column; gap: 2px;
   }
-  .sidebar-section { font-size: 10px; color: #5b5b6e; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 8px 10px 4px; }
+  .sidebar-section { font-size: 10px; color: #5b5b6e; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 6px 10px 4px; }
   .sidebar-item {
-    padding: 8px 10px; border-radius: 6px; font-size: 13px; color: #e8e8ed;
-    cursor: pointer; display: flex; align-items: center; gap: 8px;
+    padding: 6px 10px; border-radius: 6px; font-size: 13px; color: #e8e8ed;
+    display: flex; align-items: center; gap: 8px;
   }
   .sidebar-item.active { background: rgba(0,229,160,0.1); color: #00e5a0; }
   .provider-dot { width: 6px; height: 6px; border-radius: 50%; }
@@ -37,24 +36,21 @@
   .dot-gemini { background: #a29bfe; }
   .dot-aider { background: #fd79a8; }
   .dot-ollama { background: #55efc4; }
-  .chat-area { flex: 1; display: flex; flex-direction: column; background: #0a0a0f; }
-  .chat-messages { flex: 1; padding: 20px; overflow: hidden; }
-  .message { margin-bottom: 16px; }
-  .msg-header { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
-  .msg-user { color: #00e5a0; }
-  .msg-ai { color: #d4a574; }
-  .msg-body { font-size: 13px; color: #e8e8ed; line-height: 1.6; }
+  .chat-area { flex: 1; display: flex; flex-direction: column; background: #0a0a0f; overflow: hidden; }
+  .chat-messages { flex: 1; padding: 16px 20px; overflow: hidden; }
+  .message { margin-bottom: 12px; }
+  .msg-header { font-size: 11px; font-weight: 600; margin-bottom: 4px; }
+  .msg-user { color: #00e5a0; } .msg-ai { color: #d4a574; }
+  .msg-body { font-size: 12px; color: #e8e8ed; line-height: 1.5; }
   .code-block {
     background: #12121a; border: 1px solid #1a1a2e; border-radius: 6px;
-    padding: 10px 12px; font-family: 'SF Mono', monospace; font-size: 12px;
+    padding: 8px 12px; font-family: 'SF Mono', monospace; font-size: 11px;
     color: #e8e8ed; margin-top: 6px; line-height: 1.5; white-space: pre;
   }
-  .code-kw { color: #ff79c6; }
-  .code-str { color: #f1fa8c; }
-  .code-fn { color: #00e5a0; }
+  .code-kw { color: #ff79c6; } .code-str { color: #f1fa8c; } .code-fn { color: #00e5a0; }
   .input-bar {
-    height: 48px; border-top: 1px solid #1a1a2e; display: flex; align-items: center;
-    padding: 0 16px; background: #0f0f17;
+    height: 44px; border-top: 1px solid #1a1a2e; display: flex; align-items: center;
+    padding: 0 16px; background: #0f0f17; flex-shrink: 0;
   }
   .input-text { font-size: 13px; color: #5b5b6e; }
   .model-tag { font-size: 10px; padding: 2px 8px; border-radius: 4px; background: rgba(212,165,116,0.15); color: #d4a574; margin-left: auto; }
@@ -74,10 +70,6 @@
       <div class="sidebar-item"><span class="provider-dot dot-gemini"></span>Gemini CLI</div>
       <div class="sidebar-item"><span class="provider-dot dot-aider"></span>Aider</div>
       <div class="sidebar-item"><span class="provider-dot dot-ollama"></span>Ollama</div>
-      <div class="sidebar-section" style="margin-top: 12px;">Recent</div>
-      <div class="sidebar-item" style="color: #5b5b6e; font-size: 12px;">refactor auth middleware</div>
-      <div class="sidebar-item" style="color: #5b5b6e; font-size: 12px;">fix postgres connection</div>
-      <div class="sidebar-item" style="color: #5b5b6e; font-size: 12px;">add rate limiting</div>
     </div>
     <div class="chat-area">
       <div class="chat-messages">
@@ -87,7 +79,7 @@
         </div>
         <div class="message">
           <div class="msg-header msg-ai">claude opus 4</div>
-          <div class="msg-body">I'll refactor the auth middleware. Here's the updated implementation:</div>
+          <div class="msg-body">Here's the updated implementation:</div>
           <div class="code-block"><span class="code-kw">async function</span> <span class="code-fn">verifyToken</span>(req, res, next) {
   <span class="code-kw">const</span> token = req.headers.authorization?.split(<span class="code-str">' '</span>)[1];
   <span class="code-kw">if</span> (!token) <span class="code-kw">return</span> res.status(401).json({
