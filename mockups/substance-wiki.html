@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 800px; height: 450px; overflow: hidden;
+    background: #0a0a0f; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  }
+  .window {
+    width: 800px; height: 450px; border-radius: 10px; overflow: hidden;
+    border: 1px solid #1a1a2e; display: flex; flex-direction: column;
+  }
+  .titlebar {
+    height: 40px; background: #0f0f17; display: flex; align-items: center;
+    padding: 0 14px; gap: 7px; border-bottom: 1px solid #1a1a2e; flex-shrink: 0;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f57; } .dot-y { background: #ffbd2e; } .dot-g { background: #28c840; }
+  .url-bar {
+    flex: 1; height: 24px; background: #12121a; border-radius: 6px; margin: 0 60px 0 12px;
+    display: flex; align-items: center; padding: 0 10px;
+    font-size: 12px; color: #5b5b6e;
+  }
+  .url-green { color: #00e5a0; }
+  .page { flex: 1; display: flex; overflow: hidden; }
+  .sidebar-nav {
+    width: 180px; background: #0f0f17; border-right: 1px solid #1a1a2e;
+    padding: 16px 12px; font-size: 12px;
+  }
+  .nav-title { color: #00e5a0; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .nav-item { color: #5b5b6e; padding: 4px 0; }
+  .nav-item.active { color: #e8e8ed; }
+  .main-content { flex: 1; padding: 20px 24px; overflow: hidden; }
+  .substance-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .substance-name { font-size: 22px; font-weight: 700; color: #e8e8ed; }
+  .substance-class { font-size: 11px; padding: 3px 10px; border-radius: 4px; background: rgba(0,229,160,0.1); color: #00e5a0; font-weight: 500; }
+  .stats-row { display: flex; gap: 20px; margin-bottom: 16px; }
+  .stat { font-size: 12px; }
+  .stat-label { color: #5b5b6e; }
+  .stat-value { color: #e8e8ed; font-weight: 600; }
+  .section-title { font-size: 13px; font-weight: 600; color: #e8e8ed; margin-bottom: 10px; }
+  .dosage-table {
+    width: 100%; border-collapse: collapse; font-size: 11px; margin-bottom: 16px;
+  }
+  .dosage-table th {
+    text-align: left; padding: 6px 8px; color: #5b5b6e; font-weight: 500;
+    border-bottom: 1px solid #1a1a2e;
+  }
+  .dosage-table td {
+    padding: 5px 8px; color: #e8e8ed; border-bottom: 1px solid rgba(26,26,46,0.5);
+  }
+  .dose-low { color: #00e5a0; }
+  .dose-med { color: #ffbd2e; }
+  .dose-high { color: #ff5f57; }
+  .interactions-grid {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .interact-badge {
+    font-size: 10px; padding: 3px 8px; border-radius: 4px; font-weight: 500;
+  }
+  .interact-safe { background: rgba(0,229,160,0.1); color: #00e5a0; }
+  .interact-caution { background: rgba(255,189,46,0.1); color: #ffbd2e; }
+  .interact-danger { background: rgba(255,95,87,0.1); color: #ff5f57; }
+  .interact-unknown { background: rgba(91,91,110,0.1); color: #5b5b6e; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+    <div class="url-bar"><span class="url-green">🔒</span>&nbsp; substancewiki.org/substance/caffeine</div>
+  </div>
+  <div class="page">
+    <div class="sidebar-nav">
+      <div class="nav-title">Categories</div>
+      <div class="nav-item active">Stimulants</div>
+      <div class="nav-item">Psychedelics</div>
+      <div class="nav-item">Depressants</div>
+      <div class="nav-item">Nootropics</div>
+      <div class="nav-item">Dissociatives</div>
+      <div class="nav-item">Empathogens</div>
+      <div class="nav-title" style="margin-top: 14px;">Stats</div>
+      <div class="nav-item">381 substances</div>
+      <div class="nav-item">14,967 interactions</div>
+      <div class="nav-item">240+ effects</div>
+    </div>
+    <div class="main-content">
+      <div class="substance-header">
+        <span class="substance-name">Caffeine</span>
+        <span class="substance-class">Stimulant</span>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><span class="stat-label">Duration: </span><span class="stat-value">3-5 hours</span></div>
+        <div class="stat"><span class="stat-label">Onset: </span><span class="stat-value">15-45 min</span></div>
+        <div class="stat"><span class="stat-label">Half-life: </span><span class="stat-value">5 hours</span></div>
+      </div>
+      <div class="section-title">Dosage Guide</div>
+      <table class="dosage-table">
+        <tr><th>Level</th><th>Oral</th><th>Effects</th></tr>
+        <tr><td class="dose-low">Threshold</td><td>20 mg</td><td>Mild alertness</td></tr>
+        <tr><td class="dose-low">Light</td><td>50-100 mg</td><td>Increased focus</td></tr>
+        <tr><td class="dose-med">Common</td><td>100-200 mg</td><td>Stimulation, wakefulness</td></tr>
+        <tr><td class="dose-high">Strong</td><td>300-500 mg</td><td>Anxiety, jitters possible</td></tr>
+      </table>
+      <div class="section-title">Interactions</div>
+      <div class="interactions-grid">
+        <span class="interact-badge interact-safe">L-Theanine ✓</span>
+        <span class="interact-badge interact-safe">Creatine ✓</span>
+        <span class="interact-badge interact-caution">Ephedrine ⚠</span>
+        <span class="interact-badge interact-caution">Yohimbine ⚠</span>
+        <span class="interact-badge interact-danger">MAOIs ✗</span>
+        <span class="interact-badge interact-unknown">Modafinil ?</span>
+        <span class="interact-badge interact-safe">Magnesium ✓</span>
+        <span class="interact-badge interact-caution">Alcohol ⚠</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
