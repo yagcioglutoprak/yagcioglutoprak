@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 800px; height: 450px; overflow: hidden;
+    background: #0a0a0f; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  }
+  .window {
+    width: 800px; height: 450px; border-radius: 10px; overflow: hidden;
+    border: 1px solid #1a1a2e; display: flex; flex-direction: column;
+  }
+  .titlebar {
+    height: 40px; background: #0f0f17; display: flex; align-items: center;
+    padding: 0 14px; gap: 7px; border-bottom: 1px solid #1a1a2e; flex-shrink: 0;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f57; } .dot-y { background: #ffbd2e; } .dot-g { background: #28c840; }
+  .title-text { flex: 1; text-align: center; color: #5b5b6e; font-size: 13px; font-weight: 500; }
+  .content { display: flex; flex: 1; }
+  .sidebar {
+    width: 180px; background: #0f0f17; border-right: 1px solid #1a1a2e;
+    padding: 12px 8px;
+  }
+  .preset-title { font-size: 10px; color: #5b5b6e; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 10px 8px; }
+  .preset-item {
+    padding: 6px 10px; border-radius: 6px; font-size: 12px; color: #e8e8ed; margin-bottom: 2px;
+  }
+  .preset-item.active { background: rgba(0,229,160,0.1); color: #00e5a0; }
+  .main { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+  .chain-label { font-size: 10px; color: #5b5b6e; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .chain { display: flex; gap: 8px; align-items: center; }
+  .chain-block {
+    padding: 6px 14px; border-radius: 6px; font-size: 11px; font-weight: 500;
+    border: 1px solid #1a1a2e; color: #e8e8ed; background: #12121a;
+  }
+  .chain-block.active { border-color: #00e5a0; color: #00e5a0; }
+  .chain-arrow { color: #5b5b6e; font-size: 12px; }
+  .effects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; flex: 1; }
+  .effect-card {
+    background: #12121a; border: 1px solid #1a1a2e; border-radius: 10px;
+    padding: 14px; display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .effect-card.active { border-color: rgba(0,229,160,0.3); }
+  .knob {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: conic-gradient(#00e5a0 0deg, #00e5a0 var(--angle, 200deg), #1a1a2e var(--angle, 200deg), #1a1a2e 360deg);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .knob-inner {
+    width: 36px; height: 36px; border-radius: 50%; background: #12121a;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: #00e5a0; font-weight: 600; font-family: 'SF Mono', monospace;
+  }
+  .effect-name { font-size: 11px; color: #e8e8ed; font-weight: 500; }
+  .effect-value { font-size: 10px; color: #5b5b6e; font-family: 'SF Mono', monospace; }
+  .meter-bar {
+    width: 100%; height: 40px; background: #12121a; border: 1px solid #1a1a2e;
+    border-radius: 8px; display: flex; align-items: center; padding: 0 16px; gap: 12px;
+  }
+  .meter-label { font-size: 11px; color: #5b5b6e; font-weight: 500; white-space: nowrap; }
+  .meter-track { flex: 1; height: 4px; background: #1a1a2e; border-radius: 2px; overflow: hidden; display: flex; gap: 1px; }
+  .meter-seg { flex: 1; height: 100%; border-radius: 1px; }
+  .seg-on-g { background: #00e5a0; }
+  .seg-on-y { background: #ffbd2e; }
+  .seg-off { background: #1a1a2e; }
+  .db-val { font-size: 11px; color: #00e5a0; font-family: 'SF Mono', monospace; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+    <span class="title-text">ToneForge — Clean Sparkle</span>
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <div class="preset-title">Presets</div>
+      <div class="preset-item active">Clean Sparkle</div>
+      <div class="preset-item">Crunch Overdrive</div>
+      <div class="preset-item">Heavy Metal</div>
+      <div class="preset-item">Ambient Wash</div>
+      <div class="preset-item">Funky Wah</div>
+      <div class="preset-item">Blues Breaker</div>
+      <div class="preset-item">80s Chorus</div>
+      <div class="preset-item">Shoegaze</div>
+      <div class="preset-item" style="color: #5b5b6e;">+ 22 more</div>
+    </div>
+    <div class="main">
+      <div class="chain-label">Signal Chain</div>
+      <div class="chain">
+        <div class="chain-block">Input</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-block active">Compressor</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-block active">Chorus</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-block active">Delay</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-block active">Reverb</div>
+        <span class="chain-arrow">→</span>
+        <div class="chain-block">Output</div>
+      </div>
+      <div class="effects-grid">
+        <div class="effect-card active"><div class="knob" style="--angle: 200deg"><div class="knob-inner">55</div></div><div class="effect-name">Threshold</div><div class="effect-value">-18 dB</div></div>
+        <div class="effect-card active"><div class="knob" style="--angle: 140deg"><div class="knob-inner">38</div></div><div class="effect-name">Rate</div><div class="effect-value">1.2 Hz</div></div>
+        <div class="effect-card active"><div class="knob" style="--angle: 260deg"><div class="knob-inner">72</div></div><div class="effect-name">Time</div><div class="effect-value">340 ms</div></div>
+        <div class="effect-card active"><div class="knob" style="--angle: 300deg"><div class="knob-inner">83</div></div><div class="effect-name">Decay</div><div class="effect-value">2.4 s</div></div>
+        <div class="effect-card active"><div class="knob" style="--angle: 120deg"><div class="knob-inner">33</div></div><div class="effect-name">Ratio</div><div class="effect-value">4:1</div></div>
+        <div class="effect-card active"><div class="knob" style="--angle: 180deg"><div class="knob-inner">50</div></div><div class="effect-name">Depth</div><div class="effect-value">50%</div></div>
+        <div class="effect-card active"><div class="knob" style="--angle: 160deg"><div class="knob-inner">44</div></div><div class="effect-name">Feedback</div><div class="effect-value">44%</div></div>
+        <div class="effect-card active"><div class="knob" style="--angle: 220deg"><div class="knob-inner">61</div></div><div class="effect-name">Mix</div><div class="effect-value">61%</div></div>
+      </div>
+      <div class="meter-bar">
+        <span class="meter-label">Output</span>
+        <div class="meter-track">
+          <div class="meter-seg seg-on-g"></div><div class="meter-seg seg-on-g"></div>
+          <div class="meter-seg seg-on-g"></div><div class="meter-seg seg-on-g"></div>
+          <div class="meter-seg seg-on-g"></div><div class="meter-seg seg-on-g"></div>
+          <div class="meter-seg seg-on-g"></div><div class="meter-seg seg-on-g"></div>
+          <div class="meter-seg seg-on-g"></div><div class="meter-seg seg-on-y"></div>
+          <div class="meter-seg seg-on-y"></div><div class="meter-seg seg-off"></div>
+          <div class="meter-seg seg-off"></div><div class="meter-seg seg-off"></div>
+          <div class="meter-seg seg-off"></div><div class="meter-seg seg-off"></div>
+        </div>
+        <span class="db-val">-6.2 dB</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
