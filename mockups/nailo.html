@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 800px; height: 450px; overflow: hidden;
+    background: #0a0a0f;
+    display: flex; align-items: center; justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  }
+  .phone {
+    width: 260px; height: 420px; background: #0a0a0f;
+    border: 2px solid #1a1a2e; border-radius: 32px;
+    overflow: hidden; position: relative; display: flex; flex-direction: column;
+  }
+  .notch {
+    width: 120px; height: 24px; background: #0a0a0f;
+    border-radius: 0 0 14px 14px; margin: 0 auto;
+    border: 1px solid #1a1a2e; border-top: none;
+  }
+  .status-bar {
+    display: flex; justify-content: space-between; padding: 4px 20px 0;
+    font-size: 11px; color: #5b5b6e;
+  }
+  .app-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+  .camera-view {
+    flex: 1; position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #1a1225 0%, #0f0f17 40%, #12121a 100%);
+  }
+  .hand {
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    width: 180px; height: 200px;
+  }
+  .palm {
+    position: absolute; bottom: 0; left: 30px; width: 120px; height: 100px;
+    background: rgba(180,140,120,0.15); border-radius: 20px 20px 30px 30px;
+  }
+  .finger {
+    position: absolute; background: rgba(180,140,120,0.15); border-radius: 10px 10px 4px 4px;
+  }
+  .f1 { width: 22px; height: 70px; bottom: 80px; left: 32px; transform: rotate(-8deg); }
+  .f2 { width: 22px; height: 82px; bottom: 85px; left: 56px; transform: rotate(-2deg); }
+  .f3 { width: 22px; height: 78px; bottom: 83px; left: 80px; transform: rotate(2deg); }
+  .f4 { width: 20px; height: 64px; bottom: 78px; left: 104px; transform: rotate(6deg); }
+  .thumb { width: 24px; height: 50px; bottom: 50px; left: 10px; transform: rotate(-30deg); border-radius: 12px; }
+  .nail {
+    position: absolute; border-radius: 6px 6px 2px 2px;
+    background: linear-gradient(135deg, #ff6b9d, #c44dff);
+    box-shadow: 0 0 8px rgba(196,77,255,0.4);
+  }
+  .n1 { width: 14px; height: 16px; bottom: 138px; left: 36px; transform: rotate(-8deg); }
+  .n2 { width: 14px; height: 18px; bottom: 155px; left: 60px; transform: rotate(-2deg); }
+  .n3 { width: 14px; height: 17px; bottom: 149px; left: 84px; transform: rotate(2deg); }
+  .n4 { width: 12px; height: 15px; bottom: 130px; left: 107px; transform: rotate(6deg); }
+  .n-thumb { width: 16px; height: 14px; bottom: 92px; left: 12px; transform: rotate(-30deg); }
+  .ar-badge {
+    position: absolute; top: 12px; right: 12px;
+    font-size: 10px; padding: 3px 8px; border-radius: 4px;
+    background: rgba(0,229,160,0.15); color: #00e5a0; font-weight: 600;
+  }
+  .ar-corners {
+    position: absolute; top: 60px; left: 20px; right: 20px; bottom: 60px;
+    border: 1px solid rgba(0,229,160,0.15); border-radius: 8px;
+  }
+  .ar-dot {
+    position: absolute; width: 4px; height: 4px; border-radius: 50%;
+    background: #00e5a0; opacity: 0.5;
+  }
+  .ad1 { top: 58px; left: 18px; } .ad2 { top: 58px; right: 18px; }
+  .ad3 { bottom: 58px; left: 18px; } .ad4 { bottom: 58px; right: 18px; }
+  .design-panel {
+    height: 100px; background: #0f0f17; border-top: 1px solid #1a1a2e;
+    padding: 10px 14px; position: relative;
+  }
+  .panel-title { font-size: 10px; color: #5b5b6e; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .designs { display: flex; gap: 8px; }
+  .design-circle {
+    width: 36px; height: 36px; border-radius: 50%; border: 2px solid #1a1a2e;
+  }
+  .design-circle.active { border-color: #00e5a0; }
+  .dc1 { background: linear-gradient(135deg, #ff6b9d, #c44dff); }
+  .dc2 { background: linear-gradient(135deg, #ff0000, #ff6b00); }
+  .dc3 { background: linear-gradient(135deg, #00e5a0, #00a8ff); }
+  .dc4 { background: linear-gradient(135deg, #f1fa8c, #ffbd2e); }
+  .dc5 { background: linear-gradient(135deg, #e8e8ed, #5b5b6e); }
+  .capture-btn {
+    position: absolute; bottom: 12px; right: 14px;
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 2px solid #00e5a0; background: transparent;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .capture-inner { width: 26px; height: 26px; border-radius: 50%; background: #00e5a0; }
+  .side-text {
+    position: absolute; left: 340px; top: 50%; transform: translateY(-50%);
+  }
+  .side-title { font-size: 24px; font-weight: 700; color: #e8e8ed; margin-bottom: 8px; }
+  .side-desc { font-size: 13px; color: #5b5b6e; line-height: 1.6; max-width: 200px; }
+  .side-tag { margin-top: 8px; font-size: 11px; color: #00e5a0; font-family: monospace; }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="status-bar"><span>9:41</span><span>5G ▂▅▇</span></div>
+    <div class="app-content">
+      <div class="camera-view">
+        <div class="ar-badge">● AR Active</div>
+        <div class="ar-corners"></div>
+        <div class="ar-dot ad1"></div><div class="ar-dot ad2"></div>
+        <div class="ar-dot ad3"></div><div class="ar-dot ad4"></div>
+        <div class="hand">
+          <div class="finger f1"></div>
+          <div class="finger f2"></div>
+          <div class="finger f3"></div>
+          <div class="finger f4"></div>
+          <div class="finger thumb"></div>
+          <div class="palm"></div>
+          <div class="nail n1"></div>
+          <div class="nail n2"></div>
+          <div class="nail n3"></div>
+          <div class="nail n4"></div>
+          <div class="nail n-thumb"></div>
+        </div>
+      </div>
+      <div class="design-panel">
+        <div class="panel-title">Choose design</div>
+        <div class="designs">
+          <div class="design-circle dc1 active"></div>
+          <div class="design-circle dc2"></div>
+          <div class="design-circle dc3"></div>
+          <div class="design-circle dc4"></div>
+          <div class="design-circle dc5"></div>
+        </div>
+        <div class="capture-btn"><div class="capture-inner"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="side-text">
+    <div class="side-title">Nailo</div>
+    <div class="side-desc">try nail designs in AR<br>before the salon.</div>
+    <div class="side-tag">swift · arkit · coreml</div>
+  </div>
+</body>
+</html>
