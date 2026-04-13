@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 800px; height: 450px; overflow: hidden;
+    background: #0a0a0f; font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+    font-size: 13px; color: #e8e8ed; padding: 0;
+  }
+  .window {
+    width: 800px; height: 450px; border-radius: 10px; overflow: hidden;
+    border: 1px solid #1a1a2e; display: flex; flex-direction: column;
+  }
+  .titlebar {
+    height: 32px; background: #0f0f17; display: flex; align-items: center;
+    padding: 0 12px; gap: 7px; border-bottom: 1px solid #1a1a2e; flex-shrink: 0;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f57; }
+  .dot-y { background: #ffbd2e; }
+  .dot-g { background: #28c840; }
+  .titlebar-text {
+    margin-left: 12px; color: #5b5b6e; font-size: 12px;
+  }
+  .terminal {
+    flex: 1; padding: 16px; overflow: hidden; line-height: 1.7;
+  }
+  .green { color: #00e5a0; }
+  .red { color: #ff5f57; }
+  .yellow { color: #ffbd2e; }
+  .muted { color: #5b5b6e; }
+  .white { color: #e8e8ed; }
+  .bold { font-weight: 600; }
+  .line { margin-bottom: 2px; }
+  .indent { padding-left: 20px; }
+  .divider { border: none; border-top: 1px solid #1a1a2e; margin: 8px 0; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="dot dot-r"></div>
+    <div class="dot dot-y"></div>
+    <div class="dot dot-g"></div>
+    <span class="titlebar-text">0day-agent — target: api.example.com</span>
+  </div>
+  <div class="terminal">
+    <div class="line"><span class="green bold">DeepSeeker v2.1</span> <span class="muted">— autonomous vulnerability assessment agent</span></div>
+    <div class="line"><span class="muted">powered by MiniMax M2.1 · started 2m 47s ago</span></div>
+    <hr class="divider">
+    <div class="line"><span class="green">▸</span> <span class="white">Reconnaissance</span> <span class="muted">·····</span> <span class="green">COMPLETE</span></div>
+    <div class="line indent"><span class="muted">found 47 endpoints, 12 parameters, 3 auth flows</span></div>
+    <div class="line"><span class="green">▸</span> <span class="white">Fuzzing</span> <span class="muted">··········</span> <span class="green">COMPLETE</span></div>
+    <div class="line indent"><span class="muted">sent 2,341 requests · 18 anomalies detected</span></div>
+    <div class="line"><span class="yellow">▸</span> <span class="white">Exploitation</span> <span class="muted">·····</span> <span class="yellow">IN PROGRESS</span> <span class="muted">68%</span></div>
+    <div class="line indent"><span class="muted">verifying 4 potential vulnerabilities...</span></div>
+    <hr class="divider">
+    <div class="line"><span class="red bold">✗ CRITICAL</span> <span class="white">SQL Injection in /api/v2/users?id=</span></div>
+    <div class="line indent"><span class="muted">type: blind boolean-based · confidence: 97%</span></div>
+    <div class="line"><span class="yellow bold">⚠ HIGH</span> <span class="white">Broken Auth on /api/v2/admin/reset</span></div>
+    <div class="line indent"><span class="muted">type: IDOR via sequential ID · confidence: 91%</span></div>
+    <div class="line"><span class="yellow bold">⚠ HIGH</span> <span class="white">XSS (Reflected) in /search?q=</span></div>
+    <div class="line indent"><span class="muted">type: reflected · confidence: 88%</span></div>
+    <hr class="divider">
+    <div class="line"><span class="muted">findings: </span><span class="red bold">1 critical</span><span class="muted"> · </span><span class="yellow bold">2 high</span><span class="muted"> · </span><span class="white">1 verifying</span></div>
+  </div>
+</div>
+</body>
+</html>
