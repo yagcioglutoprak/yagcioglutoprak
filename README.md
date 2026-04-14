@@ -2,22 +2,20 @@
 
 <br/>
 
-I'm **Toprak** — a developer and security engineer based in Wrocław. I build apps people actually use and break apps they didn't expect to be broken. Native macOS, iOS, full-stack web, and the occasional 0day.
+22, Wrocław. I write code, find bugs in other people's code, and play too much electric guitar. Half my projects are apps I actually ship, half are things I broke on purpose. I like native macOS, AR on phones, DSP, and anything that looks nothing like the thing next to it.
 
-**Currently shipping:** an autonomous AI vulnerability scanner, a unified macOS client for AI coding assistants, and a guitar effects processor for Mac. Bug bounty on the side.
-
-**Open to:** interesting work, collabs, security audits, or just trading ideas.
-**Talk to me:** [yagcioglutoprak@gmail.com](mailto:yagcioglutoprak@gmail.com) · DMs open on [Twitter](https://twitter.com/Toprak_MCSG)
+Always between three unfinished ideas. Usually I finish them.
 
 <br/>
 
 ### >_ NOW
 
 ```
-> 0day-agent       — finishing autonomous exploit chain verification
-> jolie            — beta testing macOS multi-provider AI client
-> toprak.sh        — relaunching the personal site
-> hackerone        — hunting on programs in fintech & SaaS
+> 0day-agent    finishing the exploit-chain verifier
+> jolie         shipping the first beta next month
+> toneforge     adding a tube-amp model (for me, honestly)
+> hackerone     hunting in fintech targets
+> guitar        learning old polish blues riffs, badly
 ```
 
 <br/>
@@ -30,7 +28,7 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 <img src="assets/0day-agent.png" width="400" alt="0day-agent — autonomous vulnerability scanner" />
 <br/>
 <strong>0day-agent</strong><br/>
-<sub>Autonomous AI vulnerability scanner. Finds 0days so you don't have to.</sub><br/>
+<sub>AI agent that hunts web vulnerabilities on its own. Recon → fuzz → verify.</sub><br/>
 <sub>
 <img src="https://img.shields.io/badge/Python-12121a?style=flat-square&logo=python&logoColor=00e5a0" alt="Python" />
 <img src="https://img.shields.io/badge/AI-12121a?style=flat-square&logo=openai&logoColor=00e5a0" alt="AI" />
@@ -41,7 +39,7 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 <a href="https://github.com/yagcioglutoprak/AIQuotaBar"><img src="assets/aiquotabar.png" width="400" alt="AIQuotaBar — AI usage in your menu bar" /></a>
 <br/>
 <strong><a href="https://github.com/yagcioglutoprak/AIQuotaBar">AIQuotaBar</a></strong><br/>
-<sub>Claude & ChatGPT usage limits live in your macOS menu bar.</sub><br/>
+<sub>macOS menu bar widget for Claude & ChatGPT quota. Was tired of hitting limits mid-session.</sub><br/>
 <sub>
 <img src="https://img.shields.io/badge/Python-12121a?style=flat-square&logo=python&logoColor=00e5a0" alt="Python" />
 <img src="https://img.shields.io/badge/macOS-12121a?style=flat-square&logo=apple&logoColor=00e5a0" alt="macOS" />
@@ -55,7 +53,7 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 <img src="assets/jolie-ai.png" width="400" alt="jolie — native macOS AI client" />
 <br/>
 <strong>jolie</strong><br/>
-<sub>One native macOS app for Claude Code, Codex, Gemini, Aider & more.</sub><br/>
+<sub>Native macOS app. One window for Claude Code, Codex, Gemini, Aider, Ollama.</sub><br/>
 <sub>
 <img src="https://img.shields.io/badge/Swift-12121a?style=flat-square&logo=swift&logoColor=00e5a0" alt="Swift" />
 <img src="https://img.shields.io/badge/SwiftUI-12121a?style=flat-square&logo=apple&logoColor=00e5a0" alt="SwiftUI" />
@@ -66,7 +64,7 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 <img src="assets/toneforge.png" width="400" alt="ToneForge — macOS guitar effects" />
 <br/>
 <strong>ToneForge</strong><br/>
-<sub>macOS guitar effects processor. 17+ effects, 30 presets, low-latency DSP.</sub><br/>
+<sub>Built this for my own guitar setup. 17+ effects, 30 presets, low-latency DSP.</sub><br/>
 <sub>
 <img src="https://img.shields.io/badge/Swift-12121a?style=flat-square&logo=swift&logoColor=00e5a0" alt="Swift" />
 <img src="https://img.shields.io/badge/AVAudioEngine-12121a?style=flat-square&logo=apple&logoColor=00e5a0" alt="AVAudioEngine" />
@@ -80,7 +78,7 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 <img src="assets/ogrenci-nerede.png" width="400" alt="nerede yer — student food discovery" />
 <br/>
 <strong>nerede yer?</strong><br/>
-<sub>Student food discovery app with glitch aesthetics.</sub><br/>
+<sub>Where do students actually eat in Wrocław? This answers that. Cyberpunk UI.</sub><br/>
 <sub>
 <img src="https://img.shields.io/badge/TypeScript-12121a?style=flat-square&logo=typescript&logoColor=00e5a0" alt="TypeScript" />
 <img src="https://img.shields.io/badge/React-12121a?style=flat-square&logo=react&logoColor=00e5a0" alt="React" />
@@ -90,7 +88,7 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 <img src="assets/substance-wiki.png" width="400" alt="substance wiki — harm reduction encyclopedia" />
 <br/>
 <strong>substance wiki</strong><br/>
-<sub>Encyclopedia of 381 substances, 14,967 interactions, harm reduction.</sub><br/>
+<sub>Harm-reduction encyclopedia. 381 substances, 14,967 interactions, proper dosage data.</sub><br/>
 <sub>
 <img src="https://img.shields.io/badge/Next.js-12121a?style=flat-square&logo=nextdotjs&logoColor=00e5a0" alt="Next.js" />
 <img src="https://img.shields.io/badge/PostgreSQL-12121a?style=flat-square&logo=postgresql&logoColor=00e5a0" alt="PostgreSQL" />
@@ -104,7 +102,7 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 <img src="assets/nailo.png" width="400" alt="Nailo — AR nail design try-on" />
 <br/>
 <strong>Nailo</strong><br/>
-<sub>AI nail design try-on with ARKit. See it on your hand before the salon.</sub><br/>
+<sub>iOS app. Point your camera at your hand, try on nail designs in AR.</sub><br/>
 <sub>
 <img src="https://img.shields.io/badge/Swift-12121a?style=flat-square&logo=swift&logoColor=00e5a0" alt="Swift" />
 <img src="https://img.shields.io/badge/ARKit-12121a?style=flat-square&logo=apple&logoColor=00e5a0" alt="ARKit" />
@@ -149,26 +147,23 @@ I'm **Toprak** — a developer and security engineer based in Wrocław. I build 
 
 ### >_ SECURITY
 
-Bug bounty hunter on HackerOne. I find vulnerabilities in production systems and get paid to break things responsibly. If your team needs a second set of eyes — let's talk.
+I hunt bugs on HackerOne. Mostly web and mobile targets, occasionally smart contracts. If your product has an attack surface and you want a second pair of eyes on it, email works.
 
 → [hackerone.com/toprak_y](https://hackerone.com/toprak_y)
 
 <br/>
 
-### >_ LET'S TALK
+### >_ CONTACT
 
-I love hearing about new ideas, weird hacks, and ambitious bets. The best way to reach me:
+Email is fastest. DMs on Twitter also fine.
 
 ```
-$ contact
-  email     yagcioglutoprak@gmail.com
-  twitter   @Toprak_MCSG
-  hackerone toprak_y
-  site      toprak.sh
-  location  Wrocław, Poland (CET) · open to remote
+email      yagcioglutoprak@gmail.com
+twitter    @Toprak_MCSG
+hackerone  toprak_y
+site       toprak.sh
+where      Wrocław (CET) · remote is fine
 ```
-
-If you're hiring, scoping a security engagement, or just want to swap notes on shipping things — my inbox is open. I reply within 24h.
 
 <br/>
 
@@ -181,5 +176,3 @@ If you're hiring, scoping a security engagement, or just want to swap notes on s
   &nbsp;
   <a href="https://hackerone.com/toprak_y"><img src="https://img.shields.io/badge/HackerOne-toprak__y-12121a?style=for-the-badge&logo=hackerone&logoColor=00e5a0&labelColor=0a0a0f" alt="HackerOne" /></a>
 </p>
-
-<p align="center"><sub>built with too much coffee and a healthy disrespect for status quo · 2026</sub></p>
