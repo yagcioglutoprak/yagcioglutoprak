@@ -1,34 +1,31 @@
-<img src="assets/header.svg" width="100%" alt="terminal: whoami — toprak, developer / security engineer" />
+<img src="assets/header.svg" width="100%" alt="toprak@wroclaw runs ./toprak. + build: native mac and ios apps that ship. - break: other people's web and mobile, on HackerOne. 22, Wrocław." />
 
 <br/>
 
-22, Wrocław. I write code, find bugs in other people's code, and play too much electric guitar. Half my projects are apps I actually ship, half are things I broke on purpose. I like native macOS, AR on phones, DSP, and anything that looks nothing like the thing next to it.
-
-Always between three unfinished ideas. Usually I finish them.
+I make things and I break things, about half and half. Native Mac and iOS apps on one side of the line; other people's web and mobile, on the other. 22, Wrocław, usually mid-three-ideas and usually finishing them.
 
 <br/>
 
-<p align="center">
-  <a href="mailto:yagcioglutoprak@gmail.com"><img src="https://img.shields.io/badge/Email-yagcioglutoprak@gmail.com-12121a?style=for-the-badge&logo=gmail&logoColor=00e5a0&labelColor=0a0a0f" alt="Email" /></a>
-  &nbsp;
-  <a href="https://toprak.sh"><img src="https://img.shields.io/badge/Site-toprak.sh-12121a?style=for-the-badge&logo=safari&logoColor=00e5a0&labelColor=0a0a0f" alt="Site" /></a>
-  &nbsp;
-  <a href="https://twitter.com/Toprak_MCSG"><img src="https://img.shields.io/badge/Twitter-@Toprak__MCSG-12121a?style=for-the-badge&logo=x&logoColor=00e5a0&labelColor=0a0a0f" alt="Twitter" /></a>
-  &nbsp;
-  <a href="https://hackerone.com/toprak_y"><img src="https://img.shields.io/badge/HackerOne-toprak__y-12121a?style=for-the-badge&logo=hackerone&logoColor=00e5a0&labelColor=0a0a0f" alt="HackerOne" /></a>
-</p>
+### `+` building
+
+**[dusty](https://github.com/yagcioglutoprak/dusty)** &nbsp;·&nbsp; Swift &nbsp;·&nbsp; open source  
+A free CleanMyMac alternative for macOS. Frees up disk space without ever deleting something it shouldn't. Native, no Electron, no subscription.
+
+**Öğrenci Nerede Yer?** &nbsp;·&nbsp; [iOS beta](https://testflight.apple.com/join/wTukQquP)  
+A social dining app for Turkish university students: cheap eats near campus, an Istanbul map full of pins, and swipe-to-match meal buddies. On TestFlight now.
+
+### `−` breaking
+
+I hunt bugs on **[HackerOne](https://hackerone.com/toprak_y)**: mostly web and mobile targets, the occasional smart contract. If your product has an attack surface and you'd like a second pair of eyes on it, email me.
+
+<br/>
 
 ```
 email      yagcioglutoprak@gmail.com
+site       toprak.sh
 twitter    @Toprak_MCSG
 hackerone  toprak_y
-site       toprak.sh
-where      Wrocław (CET) · remote is fine
+where      Wrocław · CET · remote is fine
 ```
 
-Email is fastest. DMs on Twitter also fine.
-
-
-I hunt bugs on HackerOne. Mostly web and mobile targets, occasionally smart contracts. If your product has an attack surface and you want a second pair of eyes on it, email works.
-
-→ [hackerone.com/toprak_y](https://hackerone.com/toprak_y)
+Email is fastest. Twitter DMs are open too.

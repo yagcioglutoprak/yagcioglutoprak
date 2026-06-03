@@ -1,36 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 240" fill="none" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace">
   <defs>
-    <clipPath id="rounded">
-      <rect width="800" height="220" rx="8" ry="8"/>
-    </clipPath>
+    <clipPath id="rounded"><rect width="820" height="240" rx="8" ry="8"/></clipPath>
   </defs>
   <g clip-path="url(#rounded)">
-    <!-- Background -->
-    <rect width="800" height="220" fill="#0a0a0f"/>
-    <!-- Border -->
-    <rect x="0.5" y="0.5" width="799" height="219" rx="7.5" ry="7.5" stroke="#1a1a2e" stroke-width="1" fill="none"/>
-    <!-- Title bar -->
-    <rect width="800" height="36" fill="#0f0f17"/>
-    <line x1="0" y1="36" x2="800" y2="36" stroke="#1a1a2e" stroke-width="1"/>
-    <!-- Dots -->
-    <circle cx="20" cy="18" r="5" fill="#00e5a0" opacity="0.8"/>
-    <circle cx="38" cy="18" r="5" fill="#00e5a0" opacity="0.5"/>
-    <circle cx="56" cy="18" r="5" fill="#00e5a0" opacity="0.3"/>
-    <!-- Line 1: $ whoami -->
-    <text x="24" y="72" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15">
-      <tspan fill="#00e5a0">$</tspan><tspan fill="#e8e8ed"> whoami</tspan>
+    <!-- background + border -->
+    <rect width="820" height="240" fill="#0a0a0f"/>
+    <rect x="0.5" y="0.5" width="819" height="239" rx="7.5" ry="7.5" stroke="#1a1a2e" stroke-width="1" fill="none"/>
+
+    <!-- title bar -->
+    <rect width="820" height="36" fill="#0f0f17"/>
+    <line x1="0" y1="36" x2="820" y2="36" stroke="#1a1a2e" stroke-width="1"/>
+    <!-- traffic lights: one builds, one breaks, one waits -->
+    <circle cx="22" cy="18" r="5" fill="#00e5a0" opacity="0.85"/>
+    <circle cx="40" cy="18" r="5" fill="#ff7d6e" opacity="0.7"/>
+    <circle cx="58" cy="18" r="5" fill="#5b5b6e" opacity="0.6"/>
+    <text x="410" y="22" text-anchor="middle" font-size="12.5" fill="#5b5b6e">toprak@wroclaw: ~</text>
+
+    <!-- prompt -->
+    <text x="24" y="82" font-size="15" xml:space="preserve"><tspan fill="#00e5a0">toprak@wroclaw</tspan><tspan fill="#5b5b6e"> ~ % </tspan><tspan fill="#e8e8ed">./toprak</tspan></text>
+
+    <!-- output: the two halves -->
+    <text font-size="15">
+      <tspan x="28" y="128" fill="#00e5a0" font-weight="700">+</tspan>
+      <tspan x="52" y="128" fill="#00e5a0" font-weight="600">build</tspan>
+      <tspan x="132" y="128" fill="#e8e8ed">native mac &amp; ios apps that actually ship</tspan>
     </text>
-    <!-- Line 2: output -->
-    <text x="24" y="96" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#5b5b6e">toprak — developer / security engineer</text>
-    <!-- Line 3: $ cat /etc/motd -->
-    <text x="24" y="136" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15">
-      <tspan fill="#00e5a0">$</tspan><tspan fill="#e8e8ed"> cat /etc/motd</tspan>
+    <text font-size="15">
+      <tspan x="28" y="158" fill="#ff7d6e" font-weight="700">&#8722;</tspan>
+      <tspan x="52" y="158" fill="#ff7d6e" font-weight="600">break</tspan>
+      <tspan x="132" y="158" fill="#e8e8ed">other people&#39;s web &amp; mobile, on hackerone</tspan>
     </text>
-    <!-- Line 4: output -->
-    <text x="24" y="160" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#5b5b6e">i break things, fix things, and ship things.</text>
-    <!-- Line 5: location -->
-    <text x="24" y="184" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#5b5b6e">based in wroclaw, poland.</text>
-    <!-- Blinking cursor -->
-    <rect x="24" y="198" width="8" height="2" fill="#00e5a0" opacity="0.6"/>
+
+    <!-- footer identity -->
+    <text x="28" y="201" font-size="13" fill="#5b5b6e">22 · wroc&#322;aw · always mid-three-ideas, usually finishes them</text>
+
+    <!-- blinking cursor on a fresh, waiting line -->
+    <rect x="28" y="220" width="11" height="2.5" fill="#00e5a0" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.7;0;0" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
   </g>
 </svg>
