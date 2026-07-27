@@ -9,10 +9,14 @@ I make things and I break things, about half and half. Native Mac and iOS apps o
 ### `+` building
 
 **[dusty](https://github.com/yagcioglutoprak/dusty)** &nbsp;·&nbsp; Swift &nbsp;·&nbsp; open source  
-A free CleanMyMac alternative for macOS. Frees up disk space without ever deleting something it shouldn't. Native, no Electron, no subscription.
+A free CleanMyMac alternative for macOS, built around one refusal: it only ever deletes from a fixed allowlist, and it shows you every path and every byte before it touches anything. No "clean everything" button, and there won't be one. Native, notarized, no Electron, no subscription.  
+`brew install --cask yagcioglutoprak/tap/dusty`
 
 **Öğrenci Nerede Yer?** &nbsp;·&nbsp; [iOS beta](https://testflight.apple.com/join/wTukQquP)  
-A social dining app for Turkish university students: cheap eats near campus, an Istanbul map full of pins, and swipe-to-match meal buddies. On TestFlight now.
+A social dining app for Turkish university students: cheap eats near campus, an Istanbul map full of pins, and swipe-to-match meal buddies. Places are rated on three axes instead of one, because cheap and bad is still bad. On TestFlight now.
+
+**glitch** &nbsp;·&nbsp; private  
+An AI pentester, and a bench to watch it think. Point it at something you are allowed to hit and it decides for itself where the soft part is: no checklist, no scanner signatures, nobody telling it which parameter to try. It keeps itself on a leash, too. Wander out of scope and the agent eats a `403` from its own tooling before the target ever hears about it. More when it ships.
 
 ### `−` breaking
 
