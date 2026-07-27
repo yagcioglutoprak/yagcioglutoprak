@@ -1,14 +1,16 @@
-<img src="assets/header.svg" width="100%" alt="toprak@wroclaw runs ./toprak. + build: native mac and ios apps that ship. - break: other people's web and mobile, on HackerOne. 22, Wrocław." />
+<img src="assets/header.svg" width="100%" alt="toprak@wroclaw runs ./toprak. + build: native mac and ios apps that actually ship. - break: other people's web and mobile, on HackerOne. exit 0. 22, Wrocław, CET." />
 
 <br/>
 
-I make things and I break things, about half and half. Native Mac and iOS apps on one side of the line; other people's web and mobile, on the other. 22, Wrocław, usually mid-three-ideas and usually finishing them.
+Most of what I build started as something that annoyed me. dusty, because CleanMyMac wants a subscription to delete cache files. [AIQuotaBar](https://github.com/yagcioglutoprak/AIQuotaBar), because I kept hitting the wall mid-session with no warning. The security work is the same instinct aimed at other people's software.
+
+Off the clock it is electric guitar, and more chord-recognition code than that hobby strictly requires.
 
 <br/>
 
 ### `+` building
 
-**[dusty](https://github.com/yagcioglutoprak/dusty)** &nbsp;·&nbsp; Swift &nbsp;·&nbsp; open source  
+**[dusty](https://github.com/yagcioglutoprak/dusty)** &nbsp;·&nbsp; Swift &nbsp;·&nbsp; open source &nbsp;·&nbsp; [![stars](https://img.shields.io/github/stars/yagcioglutoprak/dusty?style=flat-square&label=%E2%98%85&labelColor=0f0f17&color=1a1a2e)](https://github.com/yagcioglutoprak/dusty/stargazers)  
 A free CleanMyMac alternative for macOS, built around one refusal: it only ever deletes from a fixed allowlist, and it shows you every path and every byte before it touches anything. No "clean everything" button, and there won't be one. Native, notarized, no Electron, no subscription.  
 `brew install --cask yagcioglutoprak/tap/dusty`
 

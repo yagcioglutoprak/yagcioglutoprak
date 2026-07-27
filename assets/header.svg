@@ -21,22 +21,20 @@
 
     <!-- output: the two halves -->
     <text font-size="15">
-      <tspan x="28" y="128" fill="#00e5a0" font-weight="700">+</tspan>
-      <tspan x="52" y="128" fill="#00e5a0" font-weight="600">build</tspan>
-      <tspan x="132" y="128" fill="#e8e8ed">native mac &amp; ios apps that actually ship</tspan>
+      <tspan x="28" y="126" fill="#00e5a0" font-weight="700">+</tspan>
+      <tspan x="52" y="126" fill="#00e5a0" font-weight="600">build</tspan>
+      <tspan x="132" y="126" fill="#e8e8ed">native mac &amp; ios apps that actually ship</tspan>
     </text>
     <text font-size="15">
-      <tspan x="28" y="158" fill="#ff7d6e" font-weight="700">&#8722;</tspan>
-      <tspan x="52" y="158" fill="#ff7d6e" font-weight="600">break</tspan>
-      <tspan x="132" y="158" fill="#e8e8ed">other people&#39;s web &amp; mobile, on hackerone</tspan>
+      <tspan x="28" y="156" fill="#ff7d6e" font-weight="700">&#8722;</tspan>
+      <tspan x="52" y="156" fill="#ff7d6e" font-weight="600">break</tspan>
+      <tspan x="132" y="156" fill="#e8e8ed">other people&#39;s web &amp; mobile, on hackerone</tspan>
     </text>
 
-    <!-- footer identity -->
-    <text x="28" y="201" font-size="13" fill="#5b5b6e">22 · wroc&#322;aw · always mid-three-ideas, usually finishes them</text>
+    <!-- exit line: the program finished, cleanly -->
+    <text x="28" y="190" font-size="13" fill="#5b5b6e">exit 0 &#183; 22 &#183; wroc&#322;aw &#183; cet</text>
 
-    <!-- blinking cursor on a fresh, waiting line -->
-    <rect x="28" y="220" width="11" height="2.5" fill="#00e5a0" opacity="0.7">
-      <animate attributeName="opacity" values="0.7;0.7;0;0" dur="1.1s" repeatCount="indefinite"/>
-    </rect>
+    <!-- back at the prompt, still waiting for the next thing -->
+    <text x="24" y="222" font-size="15" xml:space="preserve"><tspan fill="#00e5a0">toprak@wroclaw</tspan><tspan fill="#5b5b6e"> ~ % </tspan><tspan fill="#00e5a0">&#9612;<animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/></tspan></text>
   </g>
 </svg>
