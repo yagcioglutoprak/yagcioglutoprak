@@ -1,37 +1,27 @@
-<img src="assets/header.svg" width="100%" alt="toprak@wroclaw runs ./toprak. + build: native mac and ios apps that actually ship. - break: other people's web and mobile, on HackerOne. exit 0. 22, Wrocław, CET." />
+<a href="https://toprak.sh"><img src="assets/header.svg" width="100%" alt="Toprak Yağcıoğlu. Software developer and security researcher in Madrid." /></a>
 
-<br/>
+I build apps for iPhone and Mac. On the side I look for security holes in other people’s backends. Twice I found real ones.
 
-Most of what I build started as something that annoyed me. dusty, because CleanMyMac wants a subscription to delete cache files. [AIQuotaBar](https://github.com/yagcioglutoprak/AIQuotaBar), because I kept hitting the wall mid-session with no warning. The security work is the same instinct aimed at other people's software.
+### Building
 
-Off the clock it is electric guitar, and more chord-recognition code than that hobby strictly requires.
+**Öğrenci Nerede Yer** · iOS · out now  
+Where students in Istanbul eat, rated by students on taste, price and vibe.  
+<a href="https://apps.apple.com/app/id6762939326"><img src="assets/app-store.svg" height="40" alt="Download on the App Store" /></a>
 
-<br/>
-
-### `+` building
-
-**[dusty](https://github.com/yagcioglutoprak/dusty)** &nbsp;·&nbsp; Swift &nbsp;·&nbsp; open source &nbsp;·&nbsp; [![stars](https://img.shields.io/github/stars/yagcioglutoprak/dusty?style=flat-square&label=%E2%98%85&labelColor=0f0f17&color=1a1a2e)](https://github.com/yagcioglutoprak/dusty/stargazers)  
-A free CleanMyMac alternative for macOS, built around one refusal: it only ever deletes from a fixed allowlist, and it shows you every path and every byte before it touches anything. No "clean everything" button, and there won't be one. Native, notarized, no Electron, no subscription.  
+**[Dusty](https://github.com/yagcioglutoprak/dusty)** · macOS · open source · [![stars](https://img.shields.io/github/stars/yagcioglutoprak/dusty?style=flat-square&label=%E2%98%85&labelColor=0b0b0c&color=26262a)](https://github.com/yagcioglutoprak/dusty/stargazers)  
+A Mac cleaner that shows you everything before it deletes anything.  
 `brew install --cask yagcioglutoprak/tap/dusty`
 
-**Öğrenci Nerede Yer?** &nbsp;·&nbsp; [iOS beta](https://testflight.apple.com/join/wTukQquP)  
-A social dining app for Turkish university students: cheap eats near campus, an Istanbul map full of pins, and swipe-to-match meal buddies. Places are rated on three axes instead of one, because cheap and bad is still bad. On TestFlight now.
+**Glitch** · macOS · private alpha  
+My own pentest tool: an HTTPS proxy with a coding agent inside, and its own tooling keeps it in scope.
 
-**glitch** &nbsp;·&nbsp; private  
-An AI pentester, and a bench to watch it think. Point it at something you are allowed to hit and it decides for itself where the soft part is: no checklist, no scanner signatures, nobody telling it which parameter to try. It keeps itself on a leash, too. Wander out of scope and the agent eats a `403` from its own tooling before the target ever hears about it. More when it ships.
+**[AIQuotaBar](https://github.com/yagcioglutoprak/AIQuotaBar)** · macOS  
+Your AI usage limits, live in the menu bar, so you stop hitting the wall mid-session.
 
-### `−` breaking
+### Breaking
 
-I hunt bugs on **[HackerOne](https://hackerone.com/toprak_y)**: mostly web and mobile targets, the occasional smart contract. If your product has an attack surface and you'd like a second pair of eyes on it, email me.
+Found, reported and fixed: one bug at Amazon, one at Trendyol. More on [HackerOne](https://hackerone.com/toprak_y).
 
-<br/>
+### Say hello
 
-```
-email      yagcioglutoprak@gmail.com
-site       toprak.sh
-twitter    @Toprak_MCSG
-hackerone  toprak_y
-where      Wrocław · CET · remote is fine
-```
-
-Email is fastest. Twitter DMs are open too.
+[yagcioglutoprak@gmail.com](mailto:yagcioglutoprak@gmail.com) · [toprak.sh](https://toprak.sh) · [LinkedIn](https://www.linkedin.com/in/toprak-yagcioglu-29b23215b/) · [X](https://x.com/Toprak_MCSG) · Madrid
