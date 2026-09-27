@@ -4,6 +4,10 @@ I build apps for iPhone and Mac. On the side I look for security holes in other 
 
 ### Building
 
+**[AIQuotaBar](https://github.com/yagcioglutoprak/AIQuotaBar)** · macOS · open source · [![stars](https://img.shields.io/github/stars/yagcioglutoprak/AIQuotaBar?style=flat-square&label=%E2%98%85&labelColor=0b0b0c&color=26262a)](https://github.com/yagcioglutoprak/AIQuotaBar/stargazers)  
+Claude, ChatGPT, Cursor and Copilot limits live in the menu bar, with a warning before you hit the wall.  
+`curl -fsSL https://raw.githubusercontent.com/yagcioglutoprak/AIQuotaBar/main/install.sh | bash`
+
 **Öğrenci Nerede Yer** · iOS · out now  
 Where students in Istanbul eat, rated by students on taste, price and vibe.  
 <a href="https://apps.apple.com/app/id6762939326"><img src="assets/app-store.svg" height="40" alt="Download on the App Store" /></a>
@@ -14,9 +18,6 @@ A Mac cleaner that shows you everything before it deletes anything.
 
 **Glitch** · macOS · private alpha  
 My own pentest tool: an HTTPS proxy with a coding agent inside, and its own tooling keeps it in scope.
-
-**[AIQuotaBar](https://github.com/yagcioglutoprak/AIQuotaBar)** · macOS  
-Your AI usage limits, live in the menu bar, so you stop hitting the wall mid-session.
 
 ### Breaking
 
